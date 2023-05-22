@@ -2,9 +2,9 @@
 
 [X] Java 11+
 
-[X] Lombok
+[] Lombok
 
-[X] JPA / Hibernate | Falta Aplicar corretamente
+[] JPA / Hibernate | Falta Aplicar corretamente
 
 [X] Maven
 
@@ -25,3 +25,9 @@
 [] OBSERVER
 
 [] 
+
+
+Alunos:
+Antonio Netto: https://github.com/AntonioSantiagoN
+Carlos Eduardo: https://github.com/Carloseduardomdeamaciel
+André Felipe: https://github.com/Azagalor
