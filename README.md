@@ -2,7 +2,7 @@
 
 [X] Java 11+
 
-[] Lombok
+[X] Lombok
 
 [] JPA / Hibernate | Falta Aplicar corretamente
 
@@ -12,7 +12,7 @@
 
 [] 3 tipos de padrões de projeto
 
-[] consumir 1 serviço externo
+[X] consumir 1 serviço externo
 
 [] guardar historico (Banco de dados)
 
