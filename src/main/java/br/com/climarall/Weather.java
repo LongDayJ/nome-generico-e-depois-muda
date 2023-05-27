@@ -1,7 +1,5 @@
 package br.com.climarall;
 
-import com.google.gson.annotations.SerializedName;
-
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -16,17 +14,9 @@ import lombok.Setter;
 @Data
 @Entity
 public class Weather {
-
-    @SerializedName("city.name")
     String cityName;
-
-    @SerializedName("main")
     String clima;
-
-    @SerializedName("description")
     String description;
-
-    @SerializedName("list.dt_txt")
     String timer;
 
     @Override
