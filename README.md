@@ -22,12 +22,10 @@
 
 [] MVC
 
-[] OBSERVER
-
 [] 
 
-
 Alunos:
-Antonio Netto: https://github.com/AntonioSantiagoN
-Carlos Eduardo: https://github.com/Carloseduardomdeamaciel
+Juarez José: https://github.com/LongDayJ <br>
+Antonio Netto: https://github.com/AntonioSantiagoN <br>
+Carlos Eduardo: https://github.com/Carloseduardomdeamaciel <br>
 André Felipe: https://github.com/Azagalor
