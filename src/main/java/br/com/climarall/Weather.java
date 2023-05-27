@@ -21,9 +21,9 @@ public class Weather {
 
     @Override
     public String toString() {
-        return "Nome da cidade: " + cityName +" ,\n" +
-                "O Clima está: "+ clima + " ,\n"+
-                "Descrição: "+ description+" ,\n"+
+        return "Nome da cidade: " + cityName +",\n" +
+                "O Clima está: "+ clima + ",\n"+
+                "Descrição: "+ description+",\n"+
                 "Dia e Hora medida: "+timer;
     }
 }

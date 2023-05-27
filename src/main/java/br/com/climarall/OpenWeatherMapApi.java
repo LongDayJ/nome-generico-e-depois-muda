@@ -18,7 +18,6 @@ public class OpenWeatherMapApi {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         String APIkey = "0c09765e328574bfbec932547d0f39fd";
-        Weather weather = new Weather();
 
         Scanner scanner = new Scanner(System.in);
         print("Digite sua cidade:");
@@ -39,26 +38,37 @@ public class OpenWeatherMapApi {
         String json = response.body();
 
         JSONObject jsonObject = new JSONObject(json);
-        JSONArray listArray = jsonObject.getJSONArray("list");
-        JSONObject firstObject = listArray.getJSONObject(0);
-        
+        JSONArray listArray = jsonObject.getJSONArray("list"); 
         JSONObject cityObject = jsonObject.getJSONObject("city");
 
-        JSONArray weatherArray = firstObject.getJSONArray("weather");
-        JSONObject weatherObject = weatherArray.getJSONObject(0);
+        Weather[] forecastDays = new Weather[5];
 
 
-        weather.setCityName(cityObject.getString("name"));
-        weather.setClima(weatherObject.getString("main"));
-        weather.setDescription(weatherObject.getString("description"));
-        weather.setTimer(firstObject.getString("dt_txt"));
+        for (int i = 0; i < listArray.length(); i++) {
+            JSONObject listItem = listArray.getJSONObject(i);
+            JSONArray weatherArray = listItem.getJSONArray("weather");
+            JSONObject weatherObject = weatherArray.getJSONObject(0);
 
-        print("");
-        print(weather);
+            Weather weatherForecast = new Weather(
+                    cityObject.getString("name"),
+                    weatherObject.getString("main"),
+                    weatherObject.getString("description"),
+                    listItem.getString("dt_txt"));
 
-        String[] horas = weather.getTimer().split(" ");
-        print("");
-        print(horas[1]);
+            if (i == 0) {
+                forecastDays[i] = weatherForecast;
+            }
+            else if (i != 0 &&
+            weatherForecast.getTimer().contains(forecastDays[0].getTimer().split(" ")[1])) {
+                forecastDays[i/8] = weatherForecast;
+            }
+            
+        }
+        
+        for (Weather i : forecastDays) {
+            print("");
+            print(i);
+        }
 
         scanner.close();
     }
