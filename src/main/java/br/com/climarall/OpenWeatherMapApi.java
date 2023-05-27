@@ -51,6 +51,7 @@ public class OpenWeatherMapApi {
 
             Weather weatherForecast = new Weather(
                     cityObject.getString("name"),
+                    cityObject.getString("country"),
                     weatherObject.getString("main"),
                     weatherObject.getString("description"),
                     listItem.getString("dt_txt"));
