@@ -44,7 +44,7 @@ public class OpenWeatherMapApi {
         Weather[] forecastDays = new Weather[5];
 
 
-        for (int i = 0; i < listArray.length(); i++) {
+        for (int i = 0; i < listArray.length(); i = i+8) {
             JSONObject listItem = listArray.getJSONObject(i);
             JSONArray weatherArray = listItem.getJSONArray("weather");
             JSONObject weatherObject = weatherArray.getJSONObject(0);
