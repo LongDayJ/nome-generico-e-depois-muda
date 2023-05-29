@@ -4,7 +4,7 @@
 
 [X] Lombok
 
-[] JPA / Hibernate | Falta Aplicar corretamente
+[X] JPA / Hibernate
 
 [X] Maven
 
@@ -14,15 +14,8 @@
 
 [X] consumir 1 serviço externo
 
-[] guardar historico (Banco de dados)
+[X] guardar historico (Banco de dados)
 
-### Levantamento
-
-[] ver como encaixar o flyway
-
-[] MVC
-
-[] 
 
 Alunos:
 Juarez José: https://github.com/LongDayJ <br>
